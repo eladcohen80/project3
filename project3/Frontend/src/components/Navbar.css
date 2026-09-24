@@ -1,0 +1,33 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+.navbar a {
+  padding: 8px 12px;
+  color: var(--text-h);
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--accent);
+  background: var(--accent-bg);
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px;
+  }
+}

@@ -1,0 +1,252 @@
+.page,
+.form-page,
+.about-page {
+  width: min(100% - 48px, 1040px);
+  margin: 0 auto;
+  padding: 42px 0 64px;
+  box-sizing: border-box;
+}
+
+.page__header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.page__title,
+.form-page h1,
+.about-page h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.05;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font: inherit;
+  font-size: 0.9rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.btn--primary {
+  color: #fff;
+  background: #a348d1;
+}
+
+.btn--outline {
+  color: var(--text-h);
+  border-color: var(--border);
+  background: var(--bg);
+}
+
+.btn--danger {
+  color: #a43232;
+  border-color: #efb5b5;
+  background: #fff5f5;
+}
+
+.btn--small {
+  padding: 7px 11px;
+  font-size: 0.8rem;
+}
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--social-bg);
+}
+
+.filter-bar label {
+  color: var(--text-h);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+select,
+input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: var(--text-h);
+  background: var(--bg);
+  font: inherit;
+  font-size: 0.95rem;
+}
+
+select:focus,
+input:focus {
+  outline: 2px solid var(--accent-border);
+  outline-offset: 1px;
+}
+
+.filter-bar select {
+  width: min(260px, 100%);
+}
+
+.legend {
+  display: flex;
+  gap: 14px;
+  margin-left: auto;
+  font-size: 0.78rem;
+}
+
+.legend__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.legend__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.legend__dot--future { background: #e8871e; }
+.legend__dot--past { background: #2f8f46; }
+
+.empty-state,
+.success-box,
+.form-error {
+  margin: 18px 0;
+  padding: 14px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.empty-state { color: var(--text); background: var(--social-bg); }
+.success-box { color: #216b32; background: #d9f1dc; }
+.form-error { color: #a43232; background: #fff0f0; }
+
+.form-page {
+  max-width: 720px;
+}
+
+.form-page__intro {
+  margin-bottom: 26px;
+}
+
+.form-page__eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.form-page__intro p {
+  margin-top: 12px;
+}
+
+.meeting-form {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.meeting-form label {
+  display: grid;
+  gap: 7px;
+  color: var(--text-h);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.meeting-form__row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.about-page {
+  max-width: 900px;
+}
+
+.about-page h1 {
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+.about-page__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.about-page__grid p,
+.about-page__contact {
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--social-bg);
+}
+
+.about-page__contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-top: 18px;
+  color: var(--text);
+}
+
+.about-page__contact strong {
+  width: 100%;
+  color: var(--text-h);
+}
+
+@media (max-width: 700px) {
+  .page,
+  .form-page,
+  .about-page {
+    width: min(100% - 32px, 1040px);
+    padding-top: 28px;
+  }
+
+  .page__header,
+  .filter-bar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .filter-bar select {
+    width: 100%;
+  }
+
+  .legend {
+    margin-left: 0;
+  }
+
+  .meeting-form__row,
+  .about-page__grid {
+    grid-template-columns: 1fr;
+  }
+}
