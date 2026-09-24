@@ -1,0 +1,4 @@
+insert into "meetings" ("meeting_id", "group_id", "start_time", "end_time", "description", "room") overriding system value values (1, 1, '2026-12-25 15:30:00', '2026-12-25 16:30:00', 'the new project', 'the red room');
+insert into "meetings" ("meeting_id", "group_id", "start_time", "end_time", "description", "room") overriding system value values (2, 2, '2026-12-25 16:30:00', '2026-12-25 17:30:00', 'the new project', 'the red room');
+insert into "meetings" ("meeting_id", "group_id", "start_time", "end_time", "description", "room") overriding system value values (3, 3, '2026-12-25 17:30:00', '2026-12-25 18:30:00', 'the new project', 'the blue room');
+insert into "meetings" ("meeting_id", "group_id", "start_time", "end_time", "description", "room") overriding system value values (5, 1, '2026-09-25 12:47:00', '2026-09-25 13:47:00', 'Welcome', 'the green room');

@@ -1,0 +1,31 @@
+{
+  "info": {
+    "_postman_id": "ba1ff5ba-f977-4818-9147-9a8bf3bd5b2d",
+    "name": "New Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56517774",
+    "_collection_link": "https://go.postman.co/collection/56517774-ba1ff5ba-f977-4818-9147-9a8bf3bd5b2d?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "addMeeting",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"group_id\": 1,\r\n  \"start_time\": \"2026-12-25 15:30:00\",\r\n  \"end_time\": \"2026-12-25 16:30:00\",\r\n  \"description\": \"the new project\",\r\n  \"room\": \"the red room\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    }
+  ]
+}
